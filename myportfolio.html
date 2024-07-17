@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <style>*{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: poppins,sans-serif;
+         text-decoration: none;
+         list-style: none;
+      }
+      .header{
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100;
+         height: 0;
+         padding: 35px 12%;
+         background: rgba(0, 0, 0, 0.8);
+         backdrop-filter: blur(10px);
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         z-index: 100;
+      }
+      .logo{
+         font-size: 25px;
+         color: white;
+         font-weight: 600;
+         transition: 0.3s ease;
+      }
+      .logo:hover{
+         color: orangered;
+         text-shadow: 0 0 25px orangered;
+         text-shadow: 0 0 25px orangered;
+         transform: scale(1.1);
+     
+      }
+      span{
+         colour:orangered;
+      }
+      .navbar a{
+         font-size: 18px;
+         color: rgb(197, 50, 50);
+         font-weight: 500;
+         margin: 0 20px;
+         border-bottom: 3px solid transparent;
+         transition: 0.3s ease;
+     
+     
+     
+         
+      }
+      .navbar a:hover,
+      .navbar a.active{
+         color: orangered;
+         border-bottom: 3px solid orangered;
+         justify-content: space-between;
+      }
+      .contact{
+         padding: 10px 28px;
+         background-color: pink;
+         color: black;
+         border: 2px solid transparent;
+         border-radius: 8px;
+         font-size: 16px;
+         letter-spacing: 1px;
+         font-weight: 600;
+         transition: 0.3s ease;
+      }
+      .contact:hover{
+         background-color: orangered;
+         box-shadow: 0 0 25px;
+         color: white;
+     
+      }
+      .home{
+         width: 100px;
+         background: rgb(241, 241, 241);
+         align-items: center;
+         padding: 30px 12% 0;
+     
+      }
+      .home-content p{
+         font-family: "encode sans" sans-serif;
+         font-size: 20px;
+     
+      }
+      .home-content{
+         max-width: 800px;
+     
+      }
+      .home-content h3{
+         font-size: 42px;
+     
+      }
+      .home-content h1{
+         font-size: 62px;
+         line-height: 1.2;
+      }
+      .home-content p{
+         width: 50vw;
+         text-align: justify;
+         padding: 25px 50px 75px;
+         font-family: 100px Arial,  sans-serif;
+         font-style: bold;
+         font-size: 42px;
+     
+      }
+      .homecontenthome-p{
+         font-family: "encode sans" sans-serif;
+         font-size: 20px;
+         
+      }
+      .btn-box{
+         width: 345px;
+         display: flex;
+         gap: 2em;
+     
+      }
+      .btn-1{
+         padding: 15px 28px;
+         background-color: black;
+         color: white;
+         border: 2px solid transparent;
+         border-radius: 8px;
+         font-size: 18px;
+         letter-spacing: 1px;
+         font-weight: 600;
+         transition: 0.3s ease;
+         cursor: pointer;
+      }
+      .btn-1:hover{
+         background-color: orangered;
+         color: black;
+         border: 2px solid black;
+     
+      }
+      .btn-2{
+         padding: 15px 28px;
+         background-color: orangered;
+         color: white;
+         border: 2px solid black;
+         border-radius: 8px;
+         font-size: 18px;
+         letter-spacing: 1px;
+         font-weight: 600;
+         transition: 0.3s ease;
+         cursor: pointer;
+     
+      }
+      .btn-2:hover{
+         background-color: white;
+         color: orangered;
+       }
+       ::-webkit-scrollbar-thumb{
+         background-color: orangered;
+       }
+       ::-webkit-scrollbar{
+         width: 15px;
+       }
+       ::-webkit-scrollbar-track{
+         background-color: rgba(0, 0, 0, 0.6);
+         width: 50px;
+     
+       }
+       .Achievements{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 10% 5%;
+         gap: 10em;
+         background: whitesmoke;
+       }
+       .heading {
+         text-align: center;
+         color: orangered;
+         font-size: 42px;
+     
+       }
+       .certificate {
+         display: flex;
+         flex-direction: row;
+         align-items: first baseline;
+         padding: 5px;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         background-color: #fafafa;
+         width: 200px;
+         height: auto;
+         gap: 10px;
+     
+         padding-right: 75%;
+     
+       }
+       .portfolio-container {
+         width: 80%;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 8px;
+     
+       }
+       h1 {
+         text-align: center;
+         margin-bottom: 20px;
+         color: olivedrab;
+       }
+     
+       .education-section {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+     
+      }
+      .education-item {
+         padding: 15px;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         background-color: #fafafa;
+     
+      }
+      .education-item h2 {
+         margin: 0 0 10px 0;
+         color: #333;
+     
+      }
+      .education-item .instituon {
+         font-style: italic;
+         color: #666;
+     
+      }
+      .skills{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 12% 8%;
+         gap: 10em;
+
+        
+     
+      }
+      .skills-img img{
+         position: relative;
+         width: 500px;
+         box-shadow: 0 0 25px orangered;
+     
+         border-radius: 100%;
+      }
+      .skills-content h2{
+        text-align: left;
+        color: black;
+        font-size: 42px;
+      }
+      .skills-content ul.a {
+         list-style-type: square;
+         color: black;
+         gap: 2em;
+     
+      }
+     
+     
+      
+      .about{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 12% 8%;
+         gap: 10em;
+         background: black;
+      }
+      .about-img img{
+         position: relative;
+         width: 500px;
+         box-shadow: 0 0 25px orangered;
+     
+         border-radius: 50%;
+     
+      }
+     
+      .about-content h2{
+         text-align: left;
+         color: white;
+         font-size: 42px;
+     
+      }
+      .about-content h3{
+         font-size: 62px;
+         color: white;
+     
+      }
+      .about-content p{
+         color: white;
+         font-size: 20px;
+         margin: 2em 0 3em;
+     
+      }
+      .contact-form h2{
+         text-align: center;
+         margin-top: 3em;
+         margin-bottom: 1em;
+         font-size: 36px;
+     
+      }
+      .contact-form form{
+         max-width: 50em;
+         margin: 1rem auto;
+         text-align: center;
+         margin-bottom: 3em;
+     
+      }
+      .contact-form form .input-box input{
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+     
+      }
+      .contact-form form .input-box input,
+      .contact-form form textarea{
+         width: 100%;
+         padding: 1.5em;
+         font-size: 18px;
+         color: black;
+         background: rgb(241, 241,241);
+         border-radius: 8rem;
+         margin: 3rem;
+         resize: none;
+     
+      }
+      .footer{
+         position: relative;
+         bottom: 0;
+         width: 100%;
+         padding: 40px 0;
+         background-color: black;
+     
+      }
+      .footer .social a{
+         font-size: 24px;
+         color: white;
+         border: 2px solid orangered;
+         width: 40px;
+         height: 40px;
+         line-height: 38px;
+         display: inline-block;
+         text-align: center;
+         border-radius: 50%;
+         margin: 0 8px;
+         box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+         transition: 0.3s ease;
+     
+      }
+      .footer .social a:hover{
+         transform: scale(1.2)translate(-10px);
+         color: orangered;
+         border: 2px solid orangered;
+     
+      }
+      .footer ul{
+         margin-top: 0;
+         padding: 0;
+         font-size: 18px;
+         line-height: 1.6;
+         margin-bottom: 0;
+         text-align: center;
+      }
+     
+      .footer ul li a{
+         color: white;
+         border-bottom: 3px solid transparent;
+         transition: 0.3s ease;
+     
+      }
+      .footer ul li a:hover{
+         border-bottom: 3px solid orangered;
+      }
+      .footer ul li{
+         display: inline-block;
+         padding: 0 15px;
+      }
+      .footer .copyright{
+         margin-top: 15px;
+         text-align: center;
+         font-size: 12px;
+         color: white;
+      }
+      
+     </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>personal portfolio website</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet">
+   
+   </head>
+   <body>
+      <header class="header">
+         <a href="#" class="logo"><span>Sal</span>oni</a>
+
+
+
+         <div class="navbar">
+            <a href="#" class="Active">portfolio</a>
+            <a href="#">Skills</a>
+            <a href="#">Project</a>
+            <a href="#">Achievements</a>
+            <a href="#">Education</a>
+
+         </div>
+         <a href="#" class="contact">contact me</a>
+      </header>
+      <section class="home">
+         <div class="home-content">
+            <h3>HI!</h3>
+            <h1>HI<span>  I'm Saloni </span>   A web developer</h1>
+            <div class="p">
+               <P class="home-p">A passionate Bachelor's degree candidate in Information Technology at prof. rammeghe college of engineering and management  Amravati</P>
+            </div>
+            <div class="btn-box">
+               <button class="btn-1"> Hire me </button>
+               <button class="btn-2"> Experience </button>
+            </div>
+
+         
+
+
+
+
+         </div>
+      </section>
+
+
+
+
+
+      <section class="about">
+         <div class="about-img">
+            <img src="saloni pic.jpeg" alt="">
+         </div>
+         <div class="about-content">
+            <h2 class="heading">About<span> Me </span></h2>
+            <h3>Frontent <span>developer</span></h3>
+            <p class="P"> Hello, I am Saloni Ghodeswar, an undergraduate student pursuing a B.E degree in Information Technology.
+               at Prof. rammeghe college of engineering and management ,badnera Amravati. I am passionate about frontent development,
+               i know the programming languages like C, Java, Python, Html, CSS. I am learning new skills daily.
+              </p>
+              <a href="#" class="btn-2"> Experience </a>
+
+         </div>
+      </section>
+
+
+
+      <section class="Skills">
+         <div class="skills-img">
+            <img src="skills.jpeg" alt="">
+         </div> 
+         <div class="skills-content">
+            <h2 class="heading">Area of proficiency</h2>
+            <ul class="a">
+               <li>HTML</li>
+               <li>CSS</li>
+               <li>C-PROGRAMMING</li>
+               <li>PYTHON</li>
+               <li>JAVA</li>
+             </ul>
+               
+        </section>
+        <h2 class="heading">Achievements</h2>
+        <section class="Achievements">
+
+
+         <div class="certificates">
+            <img src="saloni ai.png" alt="AI-course" width="300" height="150">
+            <img src="saloni ml.png" alt="ML-course" width="300" height="150">
+            <img src="saloni py.png" alt="AI-course" width="300" height="150">
+
+         </div>
+        </section>
+        <section class="Education">
+         <div class="portfolio-container">
+            <h1>My Education</h1>
+            <div class="education-section">
+               <div class="education-item">
+                  <h2>Bachelor of Engineering in Information Technology</h2>
+                  <p class="institution">Prof. rammeghe college of engineering and management</p>
+                  <p class="year">2022-2026</p>
+
+               </div>
+               <div class="education-item">
+                  <h2>Intermediate PCM</h2>
+                  <P class="institution">Nagar parishad junior science college</P>
+                  <p class="year">2020-2022</p>
+               </div>
+
+               <!-- add more education items as needed -->
+                <div class="education-item">
+                  <h2>Schooling(9th &10th)</h2>
+                  <p class="instituon">Nagar parishad vidhyalay</p>
+                  <p class="year">2018-2020</p>
+                  
+                </div>
+            </div>
+         </div>
+        </section>
+
+
+        <section class="contact-form">
+         <h2 class="contact-me"><span>contact me</span></h2>
+         <form action="#">
+            <div class="input-box">
+               <input type="text" placeholder="Full Name">
+               <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+               <input type="number" placeholder="Phone Number">
+               <input type="text" placeholder="Subject">
+            </div>
+            <textarea name:"" id="" cols="30" rows="10" placeholder="your message"></textarea>
+            <input type="submit" value="send message" class="btn-1">
+
+         </form>
+
+        </section>
+        <footer class="footer">
+         <div class="social">
+            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+
+         </div>
+         <ul class="list">
+            <li>
+               <a href="#">FAQ</a>
+            </li>
+            <li>
+               <a href="#">Services</a>
+            </li>
+            <li>
+               <a href="#">About me</a>
+            </li>
+            <li>
+               <a href="#">contact</a>
+            </li>
+            <li>
+               <a href="#">Privacy Policy</a>
+            </li>
+         </ul>
+         <p class="copyright">&copy; 2024 Saloni|All Rights Reserved</p>
+        </footer>
+        
+      </body>
+</html>
